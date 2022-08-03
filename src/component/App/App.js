@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import About from '../About/About';
-import Card from '../Card/Card';
+import CatDescription from '../CatDescription/CatDescription';
 import Favorites from '../Favorites/Favorites';
 import List from '../List/List';
 import NavBar from '../NavBar/NavBar';
@@ -32,6 +32,7 @@ const App = () => {
       <About />
       <Favorites />
       <List cats={catsData}/>
+      <CatDescription cat={selectedCat}/>
     </div>
   );
 }
