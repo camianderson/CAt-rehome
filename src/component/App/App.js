@@ -4,6 +4,7 @@ import CatDescription from '../CatDescription/CatDescription';
 import Favorites from '../Favorites/Favorites';
 import List from '../List/List';
 import NavBar from '../NavBar/NavBar';
+import {Route} from 'react-router-dom';
 import './App.css';
 
 const App = () => {
@@ -33,10 +34,10 @@ const App = () => {
   return (
     <div className="App">
       <NavBar />
-      <About />
-      <Favorites />
-      <List cats={catsData} selectCat={selectCat}/>
-      <CatDescription cat={selectedCat}/>
+      <Route path='/about' render={() => <About />}/>
+      <Route path='/favorites' render={() => <Favorites />}/>
+      <Route path='/list' render={() => <List cats={catsData} selectCat={selectCat}/>}/>
+      <Route path='/cat-description' render={() => <CatDescription cat={selectedCat}/>}/>
     </div>
   );
 }
