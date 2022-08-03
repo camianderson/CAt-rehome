@@ -4,7 +4,7 @@ import CatDescription from '../CatDescription/CatDescription';
 import Favorites from '../Favorites/Favorites';
 import List from '../List/List';
 import NavBar from '../NavBar/NavBar';
-import {Route} from 'react-router-dom';
+import {Route, Link} from 'react-router-dom';
 import './App.css';
 
 const App = () => {
@@ -34,6 +34,14 @@ const App = () => {
   return (
     <div className="App">
       <NavBar />
+      <Route exact path='/' render={() => (
+        <section className='main-page'>
+          <img className='main-img' src='https://wallup.net/wp-content/uploads/2018/09/25/602884-baby_animals-kittens-cat.jpg' />
+          <Link to='/list'>
+            <button className='button-adopt'>Adopt a Cat!</button>
+          </Link>
+        </section>
+      )}/>
       <Route path='/about' render={() => <About />}/>
       <Route path='/favorites' render={() => <Favorites />}/>
       <Route path='/list' render={() => <List cats={catsData} selectCat={selectCat}/>}/>
