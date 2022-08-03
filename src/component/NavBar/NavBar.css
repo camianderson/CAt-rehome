@@ -1,0 +1,12 @@
+nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-buttons {
+  margin: 20px;
+}
+
+.fav-button {
+  margin: 20px;
+}
