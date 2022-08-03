@@ -1,8 +1,12 @@
 import React from 'react';
+import './Card.css'
 
-const Card = () => {
+const Card = ({name, picture}) => {
   return (
-    <h3>Card</h3>
+    <section className='cat-info'>
+      <img src={picture}/>
+      <h3>{name}</h3>  
+    </section>
   )
 }
 
