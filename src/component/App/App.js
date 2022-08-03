@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
+import {Route, Link, Switch} from 'react-router-dom';
 import About from '../About/About';
 import CatDescription from '../CatDescription/CatDescription';
 import Favorites from '../Favorites/Favorites';
 import List from '../List/List';
 import NavBar from '../NavBar/NavBar';
-import {Route, Link, Switch} from 'react-router-dom';
 import './App.css';
 
 const App = () => {
