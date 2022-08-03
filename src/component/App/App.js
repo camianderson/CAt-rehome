@@ -8,6 +8,7 @@ import './App.css';
 
 const App = () => {
   const [catsData, setCatsData] = useState([]);
+  const [selectedCat, setSelectedCat] = useState({});
 
   const getCatData = async () => {
     const URL = "https://petdata-api.herokuapp.com/api/v1/petsData";
@@ -22,16 +23,19 @@ const App = () => {
   
   useEffect(() => {
     getCatData();
-
-    console.log(catsData)
   }, []);
+
+  const selectCat = (id) => {
+    const findCat = catsData.find(cat => cat.id === id);
+    setSelectedCat(findCat)
+  }
 
   return (
     <div className="App">
       <NavBar />
       <About />
       <Favorites />
-      <List cats={catsData}/>
+      <List cats={catsData} selectCat={selectCat}/>
       <CatDescription cat={selectedCat}/>
     </div>
   );
