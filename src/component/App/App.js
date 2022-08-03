@@ -9,22 +9,15 @@ import './App.css';
 const App = () => {
   const [catsData, setCatsData] = useState([]);
 
-  const getCatData = () => {
+  const getCatData = async () => {
     const URL = "https://petdata-api.herokuapp.com/api/v1/petsData";
-    // try {
-    //   const response = await fetch(URL);
-    //   const data = await response.json();
-    //   setCatsData(data.petsData)
-    // } catch (error) {
-    //   console.log(error);
-    // }
-
-    fetch(URL)
-    .then(response => response.json())
-    .then(data => {
+    try {
+      const response = await fetch(URL);
+      const data = await response.json();
       setCatsData(data.petsData)
-    })
-
+    } catch (error) {
+      console.log(error);
+    }
   } 
   
   useEffect(() => {

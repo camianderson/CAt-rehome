@@ -1,17 +1,11 @@
 import React from 'react';
+import './Card.css'
 
-const Card = () => {
+const Card = ({name, picture}) => {
   return (
-    <section className='single-cat'>
-      <img></img>
-      <div className='cat-info'>
-        <h3>Name</h3>
-        <p>Sex | Type | Size</p>
-        <p>Heath:</p>
-        <p>Meet Name</p>
-        <p>about</p>
-        <p>adopt info</p>
-      </div>
+    <section className='cat-info'>
+      <img src={picture}/>
+      <h3>{name}</h3>  
     </section>
   )
 }

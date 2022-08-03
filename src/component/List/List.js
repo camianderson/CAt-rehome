@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from '../Card/Card';
+import './List.css';
 
 const List = ({cats}) => {
   const allCats = cats.map(cat => {
@@ -7,13 +8,8 @@ const List = ({cats}) => {
       <div className='single-cat'>
         <Card 
           name={cat.name}
-          type={cat.type}
           picture={cat.picture}
-          sex={cat.sex}
-          size={cat.size}
-          health={cat.health}
-          adopt={cat.adopt}
-          about={cat.about}
+          id={cat.id}
           key={cat.id}
         />
       </div>
