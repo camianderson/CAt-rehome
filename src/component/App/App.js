@@ -7,21 +7,30 @@ import NavBar from '../NavBar/NavBar';
 import './App.css';
 
 const App = () => {
-  const [catsData, setCatsData] = useState([])
+  const [catsData, setCatsData] = useState([]);
 
-  const getCatData = async () => {
+  const getCatData = () => {
     const URL = "https://petdata-api.herokuapp.com/api/v1/petsData";
-    try {
-      const response = await fetch(URL);
-      const catData = await response.json();
-      setCatsData(catData)
-    } catch (error) {
-      console.log(error);
-    }
+    // try {
+    //   const response = await fetch(URL);
+    //   const data = await response.json();
+    //   setCatsData(data.petsData)
+    // } catch (error) {
+    //   console.log(error);
+    // }
+
+    fetch(URL)
+    .then(response => response.json())
+    .then(data => {
+      setCatsData(data.petsData)
+    })
+
   } 
   
   useEffect(() => {
     getCatData();
+
+    console.log(catsData)
   }, []);
 
   return (
@@ -30,7 +39,6 @@ const App = () => {
       <About />
       <Favorites />
       <List cats={catsData}/>
-      <Card />
     </div>
   );
 }
