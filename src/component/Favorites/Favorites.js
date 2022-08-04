@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Favorites = () => {
   return (
@@ -7,3 +8,8 @@ const Favorites = () => {
 }
 
 export default Favorites;
+
+Favorites.propTypes = {
+  favoriteCats: PropTypes.array.isRequired,
+  selectCat: PropTypes.func.isRequired
+};

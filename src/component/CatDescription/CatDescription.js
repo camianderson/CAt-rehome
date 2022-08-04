@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './CatDescription.css'
 
 const CatDescription = ({cat}) => {
@@ -23,3 +24,17 @@ const CatDescription = ({cat}) => {
 }
 
 export default CatDescription;
+
+CatDescription.propTypes = {
+  cat: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    picture: PropTypes.string.isRequired,
+    sex: PropTypes.string.isRequired,
+    size: PropTypes.string.isRequired,
+    health: PropTypes.string.isRequired,
+    about: PropTypes.string.isRequired,
+    adopt: PropTypes.string.isRequired
+  }).isRequired
+};
