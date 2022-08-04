@@ -4,9 +4,19 @@ Cypress.Commands.add("iWantAdopt", () => {
     fixture: 'cat-data',
     statusCode: 200 
   })
-    cy.visit(baseURL)
-    cy.get('.adopt-button')
-      .click()
-      .url()
-      .should('eq', 'http://localhost:3000/list')
+  cy.visit(baseURL)
+  cy.get('.adopt-button')
+    .click()
+})
+
+Cypress.Commands.add("moreAboutTheCat", () => {
+  const baseURL = 'http://localhost:3000';
+  cy.intercept('GET', 'https://petdata-api.herokuapp.com/api/v1/petsData', { 
+    fixture: 'cat-data',
+    statusCode: 200 
+  })
+  cy.visit(baseURL)
+  cy.get('.adopt-button')
+    .click()
+  cy.get('.cat-info').eq(2).click()
 })

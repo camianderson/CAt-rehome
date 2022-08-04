@@ -6,20 +6,20 @@ import './CatDescription.css'
 const CatDescription = ({cat, favCat}) => {
   return(
     <section className='cat-info'>
-      <img src={cat.picture}/>
+      <img className='cat-img' src={cat.picture}/>
       <div className='cat-description'>
-        <h3>{cat.name}</h3>
-        <p>{cat.sex} | {cat.type} | {cat.size}</p>
-        <p>Heath:</p>
-        <p>{cat.health}</p>
-        <p>Meet {cat.name}</p>
-        <p>{cat.about}</p>
-        <p>{cat.adopt}</p>
+        <h3 className='cat-name'>{cat.name}</h3>
+        <p className='cat-sts'>{cat.sex} | {cat.type} | {cat.size}</p>
+        <p className='cat-health-title'>Health:</p>
+        <p className='cat-health-info'>{cat.health}</p>
+        <p className='cat-meet'>Meet {cat.name}</p>
+        <p className='cat-about'>{cat.about}</p>
+        <p className='cat-adopt'>{cat.adopt}</p>
         <Link to='/list'>
           <button className='back-button'>Back</button>
         </Link>
       </div>
-      <button className='fav-button' onClick={() => favCat(cat.id)}>Favorite</button>
+      <button className='favorite-button' onClick={() => favCat(cat.id)}>Favorite</button>
     </section>
   )
 }
