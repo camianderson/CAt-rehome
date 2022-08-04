@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './CatDescription.css'
 
-const CatDescription = ({cat}) => {
+const CatDescription = ({cat, favCat}) => {
   return(
     <section className='cat-info'>
       <img src={cat.picture}/>
@@ -19,6 +19,7 @@ const CatDescription = ({cat}) => {
           <button className='back-button'>Back</button>
         </Link>
       </div>
+      <button className='fav-button' onClick={() => favCat(cat.id)}>Favorite</button>
     </section>
   )
 }
@@ -36,5 +37,6 @@ CatDescription.propTypes = {
     health: PropTypes.string.isRequired,
     about: PropTypes.string.isRequired,
     adopt: PropTypes.string.isRequired
-  }).isRequired
+  }).isRequired,
+  favCat: PropTypes.func.isRequired
 };
