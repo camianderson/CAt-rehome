@@ -53,6 +53,13 @@ const App = () => {
         <Route path='/favorites' render={() => <Favorites favCats={favoriteCats} selectCat={selectCat}/>}/>
         <Route path='/list' render={() => <List cats={catsData} selectCat={selectCat}/>}/>
         <Route path='/cat-description/:id' render={() => <CatDescription cat={selectedCat} favCat={favoriteCat}/>}/>
+        <Route path='*' render={() => 
+        <div className='error-message'>
+          <h2>Oops something went wrong, please try again!</h2>
+          <Link to='/'>
+            <button>Go back Home!</button>
+          </Link>
+        </div>}/>
       </Switch>
     </div>
   );
