@@ -1,18 +1,17 @@
 import React from 'react';
-import Card from '../Card/Card';
+import {Link} from "react-router-dom";
 import PropTypes from 'prop-types';
 import './List.css';
 
 const List = ({cats, selectCat}) => {
   const allCats = cats.map(cat => {
     return (
-        <Card 
-          name={cat.name}
-          picture={cat.picture}
-          id={cat.id}
-          key={cat.id}
-          selectCat={selectCat}
-        />
+      <Link to={`/cat-description/${cat.id}`} style={{ textDecoration: "none" }} key={cat.id}>
+        <section className='cat-info' onClick={() => selectCat(cat.id)}>
+          <img src={cat.picture}/>
+          <h3>{cat.name}</h3>  
+        </section>
+      </Link>
     )
   })
   return (

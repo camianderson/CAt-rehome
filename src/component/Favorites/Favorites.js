@@ -6,8 +6,8 @@ import './Favorites.css';
 const Favorites = ({favCats, selectCat}) => {
   const allFavorites = favCats.map(cat => {
     return (
-      <Link to={`/cat-description/${cat.id}`} style={{ textDecoration: "none" }}>
-        <div className='fav-cat-info' onClick={() => selectCat(cat.id)} key={cat.id}>
+      <Link to={`/cat-description/${cat.id}`} style={{ textDecoration: "none" }} key={cat.id}>
+        <div className='fav-cat-info' onClick={() => selectCat(cat.id)}>
           <img src={cat.picture}/>
           <h3>{cat.name}</h3>
           <p>{cat.sex} | {cat.type} | {cat.size}</p> 
