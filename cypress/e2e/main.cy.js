@@ -19,7 +19,6 @@ describe('Main Page Flow', () => {
 
     cy.get('.fav-button')
       .should('exist')
-
   })
   it('Should be able render the cat image', () => {
     cy.get('.main-page')
@@ -55,6 +54,6 @@ describe('Main Page Flow', () => {
       .click()
       .url()
       .should('eq', 'http://localhost:3000/list')
-      
+
   })
 })
