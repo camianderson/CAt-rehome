@@ -12,16 +12,25 @@ const App = () => {
   const [catsData, setCatsData] = useState([]);
   const [selectedCat, setSelectedCat] = useState({});
   const [favoriteCats, setFavoriteCats] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   const getCatData = async () => {
+    setIsLoading(true);
     const URL = "https://petdata-api.herokuapp.com/api/v1/petsData";
     try {
       const response = await fetch(URL);
-      const data = await response.json();
-      setCatsData(data.petsData)
+      if (response.ok){
+        const data = await response.json();
+        setCatsData(data.petsData);
+        setIsLoading(false);
+        setError(false);
+      } else {
+        setError(true)
+      }
     } catch (error) {
       console.log(error);
-      return <Error />
+      setError(true)
     }
   } 
   
@@ -53,7 +62,7 @@ const App = () => {
         )}/>
         <Route path='/about' render={() => <About />}/>
         <Route path='/favorites' render={() => <Favorites favCats={favoriteCats} selectCat={selectCat}/>}/>
-        <Route path='/list' render={() => <List cats={catsData} selectCat={selectCat}/>}/>
+        {error ? (<Error />) : isLoading ? (<div> Loading...</div>): (<Route path='/list' render={() => <List cats={catsData} selectCat={selectCat}/>}/>)}
         <Route path='/cat-description/:id' render={() => <CatDescription cat={selectedCat} favCat={favoriteCat}/>}/>
         <Route path='*' render={() => <Error />}/>
       </Switch>
