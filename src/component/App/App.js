@@ -10,6 +10,7 @@ import './App.css';
 const App = () => {
   const [catsData, setCatsData] = useState([]);
   const [selectedCat, setSelectedCat] = useState({});
+  const [favoriteCats, setFavoriteCats] = useState([]);
 
   const getCatData = async () => {
     const URL = "https://petdata-api.herokuapp.com/api/v1/petsData";
@@ -31,6 +32,11 @@ const App = () => {
     setSelectedCat(findCat)
   }
 
+  const favoriteCat = (id) => {
+    const favCat = catsData.find(cat => cat.id === id);
+    setFavoriteCats([...favoriteCats, favCat])
+  }
+
   return (
     <div className="App">
       <NavBar />
@@ -44,9 +50,9 @@ const App = () => {
           </section>
         )}/>
         <Route path='/about' render={() => <About />}/>
-        <Route path='/favorites' render={() => <Favorites />}/>
+        <Route path='/favorites' render={() => <Favorites favCats={favoriteCats} selectCat={selectCat}/>}/>
         <Route path='/list' render={() => <List cats={catsData} selectCat={selectCat}/>}/>
-        <Route path='/cat-description/:id' render={() => <CatDescription cat={selectedCat}/>}/>
+        <Route path='/cat-description/:id' render={() => <CatDescription cat={selectedCat} favCat={favoriteCat}/>}/>
       </Switch>
     </div>
   );
