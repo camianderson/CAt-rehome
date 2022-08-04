@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Route, Link, Switch} from 'react-router-dom';
 import About from '../About/About';
 import CatDescription from '../CatDescription/CatDescription';
+import Error from '../Error/Error';
 import Favorites from '../Favorites/Favorites';
 import List from '../List/List';
 import NavBar from '../NavBar/NavBar';
@@ -20,6 +21,7 @@ const App = () => {
       setCatsData(data.petsData)
     } catch (error) {
       console.log(error);
+      return <Error />
     }
   } 
   
@@ -53,13 +55,7 @@ const App = () => {
         <Route path='/favorites' render={() => <Favorites favCats={favoriteCats} selectCat={selectCat}/>}/>
         <Route path='/list' render={() => <List cats={catsData} selectCat={selectCat}/>}/>
         <Route path='/cat-description/:id' render={() => <CatDescription cat={selectedCat} favCat={favoriteCat}/>}/>
-        <Route path='*' render={() => 
-        <div className='error-message'>
-          <h2>Oops something went wrong, please try again!</h2>
-          <Link to='/'>
-            <button>Go back Home!</button>
-          </Link>
-        </div>}/>
+        <Route path='*' render={() => <Error />}/>
       </Switch>
     </div>
   );
