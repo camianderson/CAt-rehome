@@ -56,7 +56,7 @@ const App = () => {
           <section className='main-page'>
             <img className='main-img' src='https://wallup.net/wp-content/uploads/2018/09/25/602884-baby_animals-kittens-cat.jpg' />
             <Link to='/list'>
-              <button className='button-adopt'>Adopt a Cat!</button>
+              <button className='adopt-button'>Adopt a Cat!</button>
             </Link>
           </section>
         )}/>
