@@ -7,6 +7,31 @@ describe('Main Page Flow', () => {
     })
     cy.visit('http://localhost:3000/')
   })
+  it('Should display an error to the cat information do not load', () => {
+    cy.intercept('GET', 'https://petdata-api.herokuapp.com/api/v1/petsData', {
+      statusCode: 400
+    })
+    cy.visit('http://localhost:3000/list')
+    .contains('h2', 'Oops something went wrong, please try again!')
+    cy.get('button').should('exist')
+  })
+  it('Should display an error to the cat information do not load', () => {
+    cy.intercept('GET', 'https://petdata-api.herokuapp.com/api/v1/petsData', {
+      statusCode: 500
+    })
+    cy.visit('http://localhost:3000/list')
+    .contains('h2', 'Oops something went wrong, please try again!')
+    cy.get('button').should('exist')
+  })
+  it.only('Should display an error if there is an error in the url', () => {
+    cy.visit('http://localhost:3000/lit')
+    .contains('h2', 'Oops something went wrong, please try again!')
+    cy.get('button').should('exist')
+
+    cy.visit('http://localhost:3000/oops')
+    .contains('h2', 'Oops something went wrong, please try again!')
+    cy.get('button').should('exist')
+  })
   it('Should be able render the title', () => {
     cy.get('h1').should('have.text', 'CAt Rehome')
   })
