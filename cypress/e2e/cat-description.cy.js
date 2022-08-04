@@ -39,7 +39,7 @@ describe('Cat Description Page Flow', () => {
       .url()
       .should('eq', 'http://localhost:3000/list')
   })
-  it.only('Should be able to click the favorite button and favorite a cat information', () => {
+  it('Should be able to click the favorite button and favorite a cat information', () => {
     cy.get('.favorite-button').click()
     cy.get('.fav-button').click()
       .url()
