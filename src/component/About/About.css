@@ -1,0 +1,7 @@
+.about-page{
+  margin:50px;
+}
+
+.about-title, .about-desc, .about-author{
+  padding: 20px;
+}
