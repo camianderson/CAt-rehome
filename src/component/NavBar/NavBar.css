@@ -1,12 +1,26 @@
 nav {
+  height: 10vh;
   display: flex;
   justify-content: space-evenly;
+  background-color: var(--dark-purple);
+}
+.nav-element {
+  display: inline-block;
+  margin: 8px 100px;
 }
 
-.nav-buttons {
+.logo {
+  color: var(--light)
+}
+
+.nav-buttons, .fav-button {
   margin: 20px;
 }
 
-.fav-button {
-  margin: 20px;
+.home-button, .about-button, .fav-button {
+  border: none;
+  background-color: transparent;
+  color:var(--light);
+  cursor: pointer;
+  font-size: .9em;
 }

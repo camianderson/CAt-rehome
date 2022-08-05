@@ -6,7 +6,7 @@ import Error from '../Error/Error';
 import Favorites from '../Favorites/Favorites';
 import List from '../List/List';
 import NavBar from '../NavBar/NavBar';
-import './App.css';
+import './App.css'; 
 
 const App = () => {
   const [catsData, setCatsData] = useState([]);
@@ -62,6 +62,7 @@ const App = () => {
     const favCat = catsData.find(cat => cat.id === id);
     setFavoriteCats([...favoriteCats, favCat])
   }
+  
 
   return (
     <div className="App">
@@ -69,8 +70,14 @@ const App = () => {
       <Switch>
         <Route exact path='/' render={() => (
           <section className='main-page'>
-            <img className='main-img' src={picture} />
-            <p>{name}</p>
+            <div className='cat-main'>
+              <div className='name-main'>
+                <p>{name}</p>
+              </div>
+              <div className='border-main-img'>
+                <img className='main-img' src={picture} />
+              </div>
+            </div>
             <Link to='/list'>
               <button className='adopt-button'>Adopt a Cat!</button>
             </Link>

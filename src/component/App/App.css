@@ -1,17 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+body, button, input, select, textarea {
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+  margin: 0;
+  background-color: var(--light);
+}
+
+:root {
+  --dark-purple: rgb(86, 4, 86);
+  --light: rgb(242, 229, 242);
+}
+
+
 .App {
   text-align: center;
+  height: 100%;
 }
 
 .main-page {
-  height: 90%;
+  height: 90vh;
   width: 100%;
   display: flex;
   flex-direction:column;
   align-items:center;
+  justify-content:space-evenly;
 
 }
 
-.main-img {
-  height: 40%;
+.cat-main {
+  height: 50vh;
   width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction:column;
+}
+
+.border-main-img {
+  height: 315px;
+  width: 315px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.main-img {
+  height: 300px;
+  width: 300px;
+}
+
+.name-main {
+  height: 40px;
+  width: 140px;
+  border-radius: 15px;
+  background-color: white;
+  position:relative;
+  top: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark-purple)
+}
+
+.adopt-button {
+  height: 30px;
+  width: 170px;
+  border-radius: 15px;
+  background-color: var(--dark-purple);
+  color: var(--light);
+  font-size: 1em;
 }
