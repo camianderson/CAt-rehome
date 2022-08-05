@@ -26,3 +26,22 @@ nav {
   cursor: pointer;
   font-size: .9em;
 }
+
+.favorite-button {
+  border: none;
+  background-color: transparent;
+  display: inline-block;
+  position: relative;
+  top: 60px;
+  left: 120px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.favorite-button::before {
+  color:black;
+}
+
+.favorite-button::after {
+  color:red;
+}

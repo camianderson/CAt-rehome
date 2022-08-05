@@ -38,7 +38,6 @@ const App = () => {
   
   useEffect(() => {
     getCatData();
-    generateRandomCat();
   }, []);
 
   const getRandomIndex = (array) => {
@@ -62,7 +61,7 @@ const App = () => {
     const favCat = catsData.find(cat => cat.id === id);
     setFavoriteCats([...favoriteCats, favCat])
   }
-  
+
 
   return (
     <div className="App">
@@ -70,7 +69,7 @@ const App = () => {
       <Switch>
         <Route exact path='/' render={() => (
           <section className='main-page'>
-            <div className='cat-main'>
+            <div className='cat-main' onLoad={generateRandomCat()}>
               <div className='name-main'>
                 <p>{name}</p>
               </div>
