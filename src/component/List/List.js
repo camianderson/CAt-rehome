@@ -8,8 +8,12 @@ const List = ({cats, selectCat}) => {
     return (
       <Link to={`/cat-description/${cat.id}`} style={{ textDecoration: "none" }} key={cat.id}>
         <section className='cat-info' onClick={() => selectCat(cat.id)}>
-          <img src={cat.picture}/>
-          <h3>{cat.name}</h3>  
+          <div className='name-list'>
+            <h3>{cat.name}</h3>  
+          </div>
+          <div className='border-list-img'>
+            <img className='list-img' src={cat.picture}/>
+          </div>
         </section>
       </Link>
     )

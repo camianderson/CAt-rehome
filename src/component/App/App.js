@@ -80,7 +80,7 @@ const App = () => {
             </div>
             <Link to='/list'>
               <button className='adopt-button'>Adopt a Cat!</button>
-            </Link>
+            </Link> 
           </section>
         )}/>
         <Route path='/about' render={() => <About />}/>

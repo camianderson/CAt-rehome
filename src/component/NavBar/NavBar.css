@@ -3,6 +3,7 @@ nav {
   display: flex;
   justify-content: space-evenly;
   background-color: var(--dark-purple);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .nav-element {
   display: inline-block;
@@ -10,11 +11,12 @@ nav {
 }
 
 .logo {
-  color: var(--light)
+  color: var(--light);
+  margin: 30px;
 }
 
 .nav-buttons, .fav-button {
-  margin: 20px;
+  margin: 25px;
 }
 
 .home-button, .about-button, .fav-button {
