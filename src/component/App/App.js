@@ -14,6 +14,8 @@ const App = () => {
   const [favoriteCats, setFavoriteCats] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [picture, setPicture] = useState('');
+  const [name, setName] = useState('');
 
   const getCatData = async () => {
     setIsLoading(true);
@@ -36,7 +38,20 @@ const App = () => {
   
   useEffect(() => {
     getCatData();
+    generateRandomCat();
   }, []);
+
+  const getRandomIndex = (array) => {
+    return Math.floor(Math.random() * array.length);
+  }
+
+  const generateRandomCat = () => {
+    const allImages = catsData.map(cat => cat.picture)
+    const allNames = catsData.map(cat => cat.name)
+    const index = getRandomIndex(allImages)
+    setPicture(allImages[index])
+    setName(allNames[index])
+  }
 
   const selectCat = (id) => {
     const findCat = catsData.find(cat => cat.id === id);
@@ -54,7 +69,8 @@ const App = () => {
       <Switch>
         <Route exact path='/' render={() => (
           <section className='main-page'>
-            <img className='main-img' src='https://wallup.net/wp-content/uploads/2018/09/25/602884-baby_animals-kittens-cat.jpg' />
+            <img className='main-img' src={picture} />
+            <p>{name}</p>
             <Link to='/list'>
               <button className='adopt-button'>Adopt a Cat!</button>
             </Link>
