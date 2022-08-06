@@ -20,7 +20,12 @@ const Favorites = ({favCats, selectCat}) => {
     )
   })
   return (
-    <div className='all-favorites'>{allFavorites}</div>
+    <section className='fav-page'>
+      <div className='all-favorites'>{allFavorites}</div>
+      <Link to='/list'>
+        <button className='back-button'>Back</button>
+      </Link>
+    </section>
   )
 }
 

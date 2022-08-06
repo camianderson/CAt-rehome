@@ -1,3 +1,9 @@
+.fav-page {
+  display: flex;
+  align-items: center;
+  flex-direction:column;
+}
+
 .all-favorites {
   height: 82%;
   padding: 20px;

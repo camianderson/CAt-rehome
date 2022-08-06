@@ -1,9 +1,7 @@
 .cat-description {
-  padding: 35px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 35px;
 }
 
 .border-info-img {
@@ -44,6 +42,17 @@
   color: var(--light);
   font-size: 1.1em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+.favorite-button {
+  border: none;
+  background-color: transparent;
+  display: inline-block;
+  position: relative;
+  top: 60px;
+  left: 120px;
+  font-size: 30px;
   cursor: pointer;
 }
 
