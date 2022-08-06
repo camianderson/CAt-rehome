@@ -5,7 +5,7 @@ import './NavBar.css';
 const NavBar = () => {
   return (
     <nav>
-      <div className='nav-buttons'>
+      <div className='nav-buttons nav-element'>
         <Link to='/'>
           <button className='home-button'>Home</button>
         </Link>
@@ -14,10 +14,10 @@ const NavBar = () => {
         </Link>
       </div>
       <Link to='/' style={{ textDecoration: "none" }}>
-        <h1>CAt Rehome</h1>
+        <h1 className='logo nav-element'>CAt Rehome</h1>
       </Link>
       <Link to='/favorites'>
-        <button className='fav-button'>Favorites</button>
+        <button className='fav-button nav-element'>Favorites</button>
       </Link>
     </nav>
   )

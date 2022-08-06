@@ -5,9 +5,16 @@ import './CatDescription.css'
 
 const CatDescription = ({cat, favCat}) => {
   return(
-    <section className='cat-info'>
-      <img className='cat-img' src={cat.picture}/>
-      <div className='cat-description'>
+    <section className='cat-description'>
+      <div className='cat-fav'>
+        <Link to='/favorites'>
+          <button className='favorite-button' onClick={() => favCat(cat.id)}>♥</button>
+        </Link>
+        <div className='border-info-img'>
+          <img className='desc-img' src={cat.picture}/>
+        </div>
+      </div>
+      <div className='cat-details'>
         <h3 className='cat-name'>{cat.name}</h3>
         <p className='cat-sts'>{cat.sex} | {cat.type} | {cat.size}</p>
         <p className='cat-health-title'>Health:</p>
@@ -15,11 +22,10 @@ const CatDescription = ({cat, favCat}) => {
         <p className='cat-meet'>Meet {cat.name}</p>
         <p className='cat-about'>{cat.about}</p>
         <p className='cat-adopt'>{cat.adopt}</p>
-        <Link to='/list'>
-          <button className='back-button'>Back</button>
-        </Link>
       </div>
-      <button className='favorite-button' onClick={() => favCat(cat.id)}>Favorite</button>
+      <Link to='/list'>
+        <button className='back-button'>Back</button>
+      </Link>
     </section>
   )
 }

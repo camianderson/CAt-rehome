@@ -2,8 +2,51 @@
   height: 82%;
   padding: 20px;
   display: grid;
-  justify-items: center;
-  grid-gap: 35px;
+  justify-content: center;
+  align-content: center;
+  grid-gap: 30px;
+  margin-bottom: 35px;
+}
+
+.a {
+  height: 50vh;
+  width: 50%;
+}
+
+.cat-info {
+  display: flex;
+  align-items: center;
+  flex-direction:column;
+}
+
+.list-img {
+  height: 300px;
+  width: 300px;
+}
+
+.border-list-img {
+  height: 315px;
+  width: 315px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.name-list {
+  height: 40px;
+  width: 140px;
+  border-radius: 10px;
+  background-color: white;
+  position:relative;
+  top: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark-purple);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 img {

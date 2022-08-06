@@ -6,7 +6,7 @@ import Error from '../Error/Error';
 import Favorites from '../Favorites/Favorites';
 import List from '../List/List';
 import NavBar from '../NavBar/NavBar';
-import './App.css';
+import './App.css'; 
 
 const App = () => {
   const [catsData, setCatsData] = useState([]);
@@ -14,6 +14,8 @@ const App = () => {
   const [favoriteCats, setFavoriteCats] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [picture, setPicture] = useState('');
+  const [name, setName] = useState('');
 
   const getCatData = async () => {
     setIsLoading(true);
@@ -38,6 +40,18 @@ const App = () => {
     getCatData();
   }, []);
 
+  const getRandomIndex = (array) => {
+    return Math.floor(Math.random() * array.length);
+  }
+
+  const generateRandomCat = () => {
+    const allImages = catsData.map(cat => cat.picture)
+    const allNames = catsData.map(cat => cat.name)
+    const index = getRandomIndex(allImages)
+    setPicture(allImages[index])
+    setName(allNames[index])
+  }
+
   const selectCat = (id) => {
     const findCat = catsData.find(cat => cat.id === id);
     setSelectedCat(findCat)
@@ -48,16 +62,24 @@ const App = () => {
     setFavoriteCats([...favoriteCats, favCat])
   }
 
+
   return (
     <div className="App">
       <NavBar />
       <Switch>
         <Route exact path='/' render={() => (
           <section className='main-page'>
-            <img className='main-img' src='https://wallup.net/wp-content/uploads/2018/09/25/602884-baby_animals-kittens-cat.jpg' />
+            <div className='cat-main' onLoad={generateRandomCat()}>
+              <div className='name-main'>
+                <p>{name}</p>
+              </div>
+              <div className='border-main-img'>
+                <img className='main-img' src={picture} />
+              </div>
+            </div>
             <Link to='/list'>
               <button className='adopt-button'>Adopt a Cat!</button>
-            </Link>
+            </Link> 
           </section>
         )}/>
         <Route path='/about' render={() => <About />}/>
