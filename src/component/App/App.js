@@ -59,7 +59,9 @@ const App = () => {
 
   const favoriteCat = (id) => {
     const favCat = catsData.find(cat => cat.id === id);
-    setFavoriteCats([...favoriteCats, favCat])
+    if(!favoriteCats.includes(favCat)){
+      setFavoriteCats([...favoriteCats, favCat])
+    }
   }
 
 
