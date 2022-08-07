@@ -24,4 +24,12 @@ describe('Cat Adoption List Page Flow', () => {
       .url()
       .should('eq', 'http://localhost:3000/cat-description/3')
   })
+  it('should be able to click the back button and navigate to the cat adoption list page', () => {
+    cy.get('.cat-info').eq(2).click()
+      .url()
+      .should('eq', 'http://localhost:3000/cat-description/3')
+    cy.get('.back-button').click()
+      .url()
+      .should('eq', 'http://localhost:3000/list')
+  })
 })
