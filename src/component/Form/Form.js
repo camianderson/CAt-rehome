@@ -47,13 +47,12 @@ const NewCatForm = ({addCat}) => {
   return (
     <section className='new-cat-form'>
       <h2 className='form-title'>Need to rehome a cat?</h2>
-      <p className='form-desc'>Let us help you! Fill out this form to add your furry friend to our list of cats to be adopted.</p>
-      {Object.keys(formErrors).length === 0 && isSubmit ? (<div className='message-success'> Cat is in our adoption list! </div>) : (<div className='message-start'> Fill out the form with as much as details as possible! </div>)}
+      {Object.keys(formErrors).length === 0 && isSubmit ? (<div className='message-success'> Success! Thank you for doing your part to prevent cat homelessness. 😺  </div>) : (<div className='message-start'> Fill out the form with as much as details as possible! </div>)}
       {Object.keys(formErrors).length === 0 && isSubmit ? (
         <div>
-          <p className='message-list'> click in the button below to check the new member of our list</p>
+          <p className='message-list'> Click on the button below to see our newest member in our list</p>
           <Link to='/list'>
-            <button className='form-list' onClick={() => setIsSubmit(false)}>list</button>
+            <button className='form-list' onClick={() => setIsSubmit(false)}>See All Cats!</button>
           </Link>
         </div>) : (
                     <form onSubmit={handleSubmit}>
@@ -61,6 +60,7 @@ const NewCatForm = ({addCat}) => {
                         <label>Name</label>
                         <input
                         name='name'
+                        placeholder='Ex: Tom'
                         type='text' 
                         className='form-name'
                         value={initialValue.name}
@@ -68,9 +68,10 @@ const NewCatForm = ({addCat}) => {
                         />
                       </div>
                       <div className='type'>
-                        <label>Type</label>
+                        <label>Life Stage</label>
                         <input
                         name='type'
+                        placeholder='Ex: Kitten'
                         type='text' 
                         className='form-type'
                         value={initialValue.type}
@@ -81,6 +82,7 @@ const NewCatForm = ({addCat}) => {
                         <label>Size</label>
                         <input
                         name='size'
+                        placeholder='Ex: Medium'
                         type='text' 
                         className='form-size'
                         value={initialValue.size}
@@ -91,6 +93,7 @@ const NewCatForm = ({addCat}) => {
                         <label>Sex</label>
                         <input
                         name='sex'
+                        placeholder='Ex: Male'
                         type='text' 
                         className='form-sex'
                         value={initialValue.sex}
@@ -101,6 +104,7 @@ const NewCatForm = ({addCat}) => {
                         <label>Health</label>
                         <textarea
                         name='health'
+                        placeholder='List any health related issues'
                         className='form-health'
                         value={initialValue.health}
                         onChange={(e) => {handleChange(e)}}
@@ -110,6 +114,7 @@ const NewCatForm = ({addCat}) => {
                         <label>Picture</label>
                         <input
                         name='picture'
+                        placeholder='Paste image URL here'
                         type='text' 
                         className='form-picture'
                         value={initialValue.picture}
@@ -120,6 +125,7 @@ const NewCatForm = ({addCat}) => {
                         <label>About</label>
                         <textarea
                         name='about'
+                        placeholder='Give us a few sentences about this cat'
                         type='text' 
                         className='form-about'
                         value={initialValue.about}
@@ -127,9 +133,10 @@ const NewCatForm = ({addCat}) => {
                         />
                       </div>
                       <div className='adopt'>
-                        <label>Adopt</label>
+                        <label>Contact Info</label>
                         <input
                         name='adopt'
+                        placeholder='email or/and phone #'
                         type='text' 
                         className='form-adopt'
                         value={initialValue.adopt}

@@ -76,6 +76,9 @@ const App = () => {
         <Route exact path='/' render={() => (
           <section className='main-page'>
             <div className='cat-main' onLoad={generateRandomCat()}>
+              <div className='spot'>
+                <h2 className='cat-spot'>Cat Spotlight </h2>
+              </div>
               <div className='name-main'>
                 <p>{name}</p>
               </div>

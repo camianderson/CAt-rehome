@@ -1,23 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-* {
-  box-sizing: border-box;
-}
-
-body, button, input, select, textarea {
-  font-family: 'Roboto', sans-serif;
-}
-
-html, body {
-  margin: 0;
-  background-color: var(--light);
-}
-
-:root {
-  --dark-purple: #320543;
-  --light: rgb(242, 229, 242);
-}
-
-
 .App {
   text-align: center;
 }
@@ -34,11 +14,27 @@ html, body {
 }
 
 .cat-main {
-  height: 60vh;
+  height: 90vh;
   width: 50%;
   display: flex;
   align-items: center;
   flex-direction:column;
+}
+
+.spot {
+height: 45px;
+width: 200px;
+background-color: rgb(50,5,67,.9);
+border-radius: 10px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+position:relative;
+top: 30px;
+}
+
+.cat-spot {
+  color: var(--light);
+  margin: 7px;
+  text-align: center;
 }
 
 .border-main-img {
@@ -78,7 +74,8 @@ html, body {
 }
 
 .adopt-button, .form-button {
-  height: 30px;
+  margin: 35px;
+  height: 35px;
   width: 170px;
   border-radius: 15px;
   background-color: var(--dark-purple);

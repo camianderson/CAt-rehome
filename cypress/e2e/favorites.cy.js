@@ -35,7 +35,7 @@ describe('Favorites Page Flow', () => {
     cy.get('.fav-cat-info').eq(1)
     .contains('p', 'Female | Adult | Medium')
   })
-  it.only('should click one of the favorite cat and go to their description page', () => {
+  it('should click one of the favorite cat and go to their description page', () => {
     cy.get('.fav-cat-info').eq(1).click()
       .url()
       .should('eq', 'http://localhost:3000/cat-description/6')
