@@ -1,5 +1,4 @@
 describe('Main Page Flow', () => {
-
   beforeEach(() => {
     cy.intercept('GET', 'https://petdata-api.herokuapp.com/api/v1/petsData', { 
       fixture: 'cat-data',
@@ -23,7 +22,7 @@ describe('Main Page Flow', () => {
     .contains('h2', 'Oops something went wrong, please try again!')
     cy.get('button').should('exist')
   })
-  it.only('Should display an error if there is an error in the url', () => {
+  it('Should display an error if there is an error in the url', () => {
     cy.visit('http://localhost:3000/lit')
     .contains('h2', 'Oops something went wrong, please try again!')
     cy.get('button').should('exist')
@@ -49,7 +48,6 @@ describe('Main Page Flow', () => {
     cy.get('.main-page')
     cy.get('.main-img')
       .should('exist')
-
   })
   it('Should be able render the adopt a cat button', () => {
     cy.get('.main-page')
@@ -74,11 +72,16 @@ describe('Main Page Flow', () => {
       .url()
       .should('eq', 'http://localhost:3000/favorites')
   })
-  it('Should be able to click the "adopt a cat!" button and navigate to the list of cats to adopt page', () => {
+  it('Should be able to click the "Adopt a Cat!" button and navigate to the list of cats to adopt page', () => {
     cy.get('.adopt-button')
       .click()
       .url()
       .should('eq', 'http://localhost:3000/list')
-
+  })
+  it('Should be able to click the "Rehome a Cat!" button and navigate to the list of cats to adopt page', () => {
+    cy.get('.form-button')
+      .click()
+      .url()
+      .should('eq', 'http://localhost:3000/new-cat-form')
   })
 })
