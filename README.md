@@ -49,7 +49,9 @@ A simple and efficient alternative to find a new home for cats!
 [View the site here!](https://cat-rehome.herokuapp.com//)
 
 ## Illustrations
-![adopt-gif](https://media.giphy.com/media/n24Fm6ZgvdDe0FvwvB/giphy.gif)
+![adopt-gif](https://media.giphy.com/media/n24Fm6ZgvdDe0FvwvB/giphy.gif)<br>
+![form-gif](https://media.giphy.com/media/KrNbXrBhUUoEmSvgsU/giphy.gif)<br>
+![rehome-gif](https://media.giphy.com/media/TiCtZzKnwMm5TuX3OI/giphy.gif)
 
 
 
