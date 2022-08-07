@@ -47,7 +47,7 @@ const NewCatForm = ({addCat}) => {
     <section className='new-cat-form'>
       <h2 className='form-title'>Need to rehome a cat?</h2>
       <p className='form-desc'>Let us help you! Fill out this form to add your furry friend to our list of cats to be adopted.</p>
-      {Object.keys(formErrors).length === 0 && isSubmit ? (<div className='message-sucess'> Cat is in our adoption list! </div>) : (<div className='message-start'> Fill out the form with as much as details as possible! </div>)}
+      {Object.keys(formErrors).length === 0 && isSubmit ? (<div className='message-success'> Cat is in our adoption list! </div>) : (<div className='message-start'> Fill out the form with as much as details as possible! </div>)}
       {Object.keys(formErrors).length === 0 && isSubmit ? (
         <div>
           <p className='message-list'> click in the button below to check the new member of our list</p>
