@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# 🐱 CAt Rehome 🐱
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+  - [Overview](#overview)
+  - [Technologies](#technologies)
+  - [Contributors](#contributors)
+  - [Set Up](#set-up)
+  - [Deployed Link](#deployed-link)
+  - [Illustrations](#illustrations)
+  - [Future Additions and Improvements](#future-additions-and-improvements)
+  - [Project Spec](#project-spec)
 
-## Available Scripts
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+CAt Rescue offers much more than the photo of your new best friend: in it, the user also finds the cat's profile with important information such as age, gender, size, vaccination status and health conditions. You can also learn a little more about the cat's personality: if it likes to play, if it is affectionate, temperamental, etc.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This is the perfect place for you to choose your new companion! The site provides the contacts of who is responsible for each cat making the adoption easy and practical. The user can get in direct contact with any questions and proceed with the adoption process.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+In doubt? You can save your favorite cats and then make a decision. Our "favorites" tab registers the cats you like the most!
+For those who rescue animals, we have the "rehome a cat" button, where you can register a cat and make it available for adoption. In the form, just fill in the name of the animal, life stage, size, gender, register if the cat has any health condition and add a minibio with useful information about its personality, along with a photo and the means of contact.
 
-### `npm test`
+A simple and efficient alternative to find a new home for cats!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies
 
-### `npm run build`
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JSON](https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contributors
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Cami Anderson](https://github.com/camianderson)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Set Up
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Go to [this](https://github.com/camianderson/CAt-rehome) repository and clone it. 
+2. `cd` into the directory.
+3. Run `npm i` in your terminal
+4. Run `npm run start-dev`
+6. Go to http://localhost:3000/ to view the site.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Deployed Link
+[View the site here!](https://cat-rehome.herokuapp.com//)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Illustrations
+![adopt-gif](https://media.giphy.com/media/n24Fm6ZgvdDe0FvwvB/giphy.gif)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Future Additions and Improvements
 
-### Code Splitting
+- Add local storage.
+- Add the new cats to the API with a POST request.
+- Add the ability to filter the cats by their name.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Project Spec
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Click [here](https://frontend.turing.edu/projects/module-3/showcase.html) for project specs, provided by [Turing School of Software and Design](https://turing.edu/).
