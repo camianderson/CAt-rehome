@@ -4,6 +4,7 @@ import About from '../About/About';
 import CatDescription from '../CatDescription/CatDescription';
 import Error from '../Error/Error';
 import Favorites from '../Favorites/Favorites';
+import NewCatForm from '../Form/Form';
 import List from '../List/List';
 import NavBar from '../NavBar/NavBar';
 import './App.css'; 
@@ -64,6 +65,9 @@ const App = () => {
     }
   }
 
+  const addCat = (newCat) => {
+    setCatsData([...catsData, newCat])
+  }
 
   return (
     <div className="App">
@@ -79,13 +83,19 @@ const App = () => {
                 <img className='main-img' src={picture} />
               </div>
             </div>
-            <Link to='/list'>
-              <button className='adopt-button'>Adopt a Cat!</button>
-            </Link> 
+            <div className='main-buttons'>
+              <Link to='/list'>
+                <button className='adopt-button'>Adopt a Cat!</button>
+              </Link> 
+              <Link to='/new-cat-form'>
+                <button className='form-button'>Rehome a Cat!</button>
+              </Link>
+            </div>
           </section>
         )}/>
         <Route path='/about' render={() => <About />}/>
         <Route path='/favorites' render={() => <Favorites favCats={favoriteCats} selectCat={selectCat}/>}/>
+        <Route path='/new-cat-form' render={() => <NewCatForm addCat={addCat} />}/>
         {error ? (<Error />) : isLoading ? (<div> Loading...</div>): (<Route path='/list' render={() => <List cats={catsData} selectCat={selectCat}/>}/>)}
         <Route path='/cat-description/:id' render={() => <CatDescription cat={selectedCat} favCat={favoriteCat}/>}/>
         <Route path='*' render={() => <Error />}/>
