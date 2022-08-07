@@ -16,10 +16,10 @@ describe('Cat Description Page Flow', () => {
       .should('exist')
   })
   it('Should be able render the cat image', () => {
-    cy.get('.cat-img').should('exist')
+    cy.get('.desc-img').should('exist')
   })
   it('Should be able render the cat name and all cat description', () => {
-    cy.get('.cat-img').should('exist')
+    cy.get('.desc-img').should('exist')
     cy.contains('.cat-name', 'Mr. Nilson')
     cy.contains('.cat-sts', 'Male | Kitten | Medium')
     cy.contains('.cat-health-title', 'Health:')
