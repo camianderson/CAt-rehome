@@ -1,5 +1,4 @@
 describe('Main Page Flow', () => {
-
   beforeEach(() => {
     cy.intercept('GET', 'https://petdata-api.herokuapp.com/api/v1/petsData', { 
       fixture: 'cat-data',
@@ -49,7 +48,6 @@ describe('Main Page Flow', () => {
     cy.get('.main-page')
     cy.get('.main-img')
       .should('exist')
-
   })
   it('Should be able render the adopt a cat button', () => {
     cy.get('.main-page')
