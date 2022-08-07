@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './Form.css';
 
 const NewCatForm = ({addCat}) => {
@@ -148,3 +149,7 @@ const NewCatForm = ({addCat}) => {
 }
 
 export default NewCatForm;
+
+NewCatForm.propTypes = {
+  addCat: PropTypes.func.isRequired
+};
