@@ -1,0 +1,48 @@
+.new-cat-form{
+  margin-top: 35px;
+  height: 90vh;
+  width: 100%;
+  font-size: 1.2em;
+}
+
+.form-title, .form-desc, .message-sucess, .message-start, .message-list {
+  margin-bottom: 30px;
+  color: var(--dark-purple);
+}
+
+input{
+  margin: 5px;
+  width: 20%;
+}
+
+.name, .type, .size, .sex, .health, .picture, .about, .adopt {
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  color: var(--dark-purple);
+}
+
+.form-submit {
+  margin: 20px;
+}
+
+textarea {
+  width: 20%;
+  height: 5em;
+}
+
+.form-list, .form-submit {
+  height: 30px;
+  width: 170px;
+  border-radius: 15px;
+  background-color: var(--dark-purple);
+  color: var(--light);
+  font-size: 1.1em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor:pointer
+}
+
+.error{
+  color: rgb(222, 54, 54);
+  font-size: 1.2em;
+}

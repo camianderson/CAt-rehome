@@ -45,14 +45,14 @@ const NewCatForm = ({addCat}) => {
 
   return (
     <section className='new-cat-form'>
-      <h2>Need to rehome a cat?</h2>
-      <p>Let us help you! Fill out this form to add your furry friend to our list of cats to be adopted.</p>
+      <h2 className='form-title'>Need to rehome a cat?</h2>
+      <p className='form-desc'>Let us help you! Fill out this form to add your furry friend to our list of cats to be adopted.</p>
       {Object.keys(formErrors).length === 0 && isSubmit ? (<div className='message-sucess'> Cat is in our adoption list! </div>) : (<div className='message-start'> Fill out the form with as much as details as possible! </div>)}
       {Object.keys(formErrors).length === 0 && isSubmit ? (
         <div>
-          <p> click in the button below to check the new member of our list</p>
+          <p className='message-list'> click in the button below to check the new member of our list</p>
           <Link to='/list'>
-            <button onClick={() => setIsSubmit(false)}>list</button>
+            <button className='form-list' onClick={() => setIsSubmit(false)}>list</button>
           </Link>
         </div>) : (
                     <form onSubmit={handleSubmit}>
@@ -76,7 +76,7 @@ const NewCatForm = ({addCat}) => {
                         onChange={(e) => {handleChange(e)}}
                         />
                       </div>
-                      <div className='fsize'>
+                      <div className='size'>
                         <label>Size</label>
                         <input
                         name='size'
@@ -98,9 +98,8 @@ const NewCatForm = ({addCat}) => {
                       </div>
                       <div className='health'>
                         <label>Health</label>
-                        <input
+                        <textarea
                         name='health'
-                        type='text' 
                         className='form-health'
                         value={initialValue.health}
                         onChange={(e) => {handleChange(e)}}
@@ -118,7 +117,7 @@ const NewCatForm = ({addCat}) => {
                       </div>
                       <div className='about'>
                         <label>About</label>
-                        <input
+                        <textarea
                         name='about'
                         type='text' 
                         className='form-about'
@@ -136,7 +135,7 @@ const NewCatForm = ({addCat}) => {
                         onChange={(e) => {handleChange(e)}}
                         />
                       </div>
-                      <p>{formErrors.empty}</p>
+                      <p className='error'>{formErrors.empty}</p>
                       <input
                       type='submit'
                       value='add cat'

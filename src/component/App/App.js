@@ -83,12 +83,14 @@ const App = () => {
                 <img className='main-img' src={picture} />
               </div>
             </div>
-            <Link to='/list'>
-              <button className='adopt-button'>Adopt a Cat!</button>
-            </Link> 
-            <Link to='/new-cat-form'>
-              <button className='form-button'>Rehome a Cat!</button>
-            </Link>
+            <div className='main-buttons'>
+              <Link to='/list'>
+                <button className='adopt-button'>Adopt a Cat!</button>
+              </Link> 
+              <Link to='/new-cat-form'>
+                <button className='form-button'>Rehome a Cat!</button>
+              </Link>
+            </div>
           </section>
         )}/>
         <Route path='/about' render={() => <About />}/>
