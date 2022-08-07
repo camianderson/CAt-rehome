@@ -1,0 +1,15 @@
+h2 {
+  color: var(--dark-purple);
+}
+
+.error-back-button { 
+  margin: 45px;
+  height: 30px;
+  width: 170px;
+  border-radius: 15px;
+  background-color: var(--dark-purple);
+  color: var(--light);
+  font-size: 1.1em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor:pointer;
+}
