@@ -18,9 +18,8 @@ describe('New Cat Form Page Flow', () => {
   it('Should display the new cat form page', () => {
     cy.get('.new-cat-form').should('exist')
   })
-  it('Should display the title, description and start message ', () => {
+  it('Should display the title, start message ', () => {
     cy.get('.form-title').should('exist')
-    cy.get('.form-desc').should('exist')
     cy.get('.message-start').should('exist')
   })
   it('Should display form', () => {
