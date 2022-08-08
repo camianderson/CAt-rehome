@@ -2,20 +2,15 @@
   text-align: center;
 }
 
-
 .main-page {
   height: 90vh;
   width: 100%;
   display: flex;
-  flex-direction:column;
+  justify-content:center;
   align-items:center;
-  justify-content:space-evenly;
-
 }
 
 .cat-main {
-  height: 90vh;
-  width: 50%;
   display: flex;
   align-items: center;
   flex-direction:column;
@@ -68,9 +63,8 @@ top: 30px;
 }
 
 .main-buttons {
-  width: 70%;
+  padding-top: 20px;
   display:flex;
-  justify-content:space-evenly;
 }
 
 .adopt-button, .form-button {

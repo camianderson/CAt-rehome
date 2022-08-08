@@ -11,9 +11,9 @@ html, body {
   margin: 0;
   background: linear-gradient(
   0deg,
-  rgba(241, 152, 175, 1) 0%,
-  rgba(235, 178, 214, 1) 0%,
-  rgba(159, 126, 205, 1) 100%
+  rgba(241, 152, 175, .6) 0%,
+  rgba(235, 178, 214, .4) 0%,
+  rgba(159, 126, 205, .2) 100%
   );
 }
 
