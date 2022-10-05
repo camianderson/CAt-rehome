@@ -13,7 +13,7 @@
 
 ## Overview
 
-CAt Rescue offers much more than the photo of your new best friend: in it, the user also finds the cat's profile with important information such as age, gender, size, vaccination status and health conditions. You can also learn a little more about the cat's personality: if it likes to play, if it is affectionate, temperamental, etc.
+CAt Rehome offers much more than the photo of your new best friend: in it, the user also finds the cat's profile with important information such as age, gender, size, vaccination status and health conditions. You can also learn a little more about the cat's personality: if it likes to play, if it is affectionate, temperamental, etc.
 
 This is the perfect place for you to choose your new companion! The site provides the contacts of who is responsible for each cat making the adoption easy and practical. The user can get in direct contact with any questions and proceed with the adoption process.
 
